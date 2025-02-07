@@ -1,0 +1,26 @@
+🔹 O que está acontecendo aqui?
+Criamos uma "classe" Pessoa (função construtora)
+
+Essa função recebe um nome e define um método dizOla(), que imprime uma saudação.
+Criamos outra "classe" chamada Funcionario
+
+Ela recebe nome, cargo e salário, e tem seu próprio método dizCargo(), que exibe o cargo.
+Herança com Pessoa.call(this, nome)
+
+A linha Pessoa.call(this, nome) executa o construtor Pessoa, passando o contexto (this) de Funcionario.
+Isso significa que todos os atributos e métodos de Pessoa são adicionados ao objeto Funcionario.
+Criamos um objeto funcionario1 do tipo Funcionario
+
+Como Funcionario herdou Pessoa, ele tem acesso ao método dizOla() além do seu próprio método dizCargo().
+🔹 Herança em JavaScript (Explicação Geral)
+Herança em Programação Orientada a Objetos (POO) significa que uma classe pode herdar propriedades e métodos de outra classe. No JavaScript, existem algumas formas de implementar herança:
+
+Herança com call() (como no seu código)
+
+call(this, ...) executa outra função passando o this do objeto atual.
+Herança com prototype (Forma mais antiga e otimizada)
+
+Podemos usar Funcionario.prototype = Object.create(Pessoa.prototype), o que economiza memória ao compartilhar métodos.
+Herança com class (ES6 - Mais moderna e recomendada)
+
+Com class, podemos usar extends para criar uma herança mais clara.
